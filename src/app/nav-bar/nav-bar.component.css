@@ -1,0 +1,7 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    background:linear-gradient(#93A5CF,#E4EfE9);
+}
