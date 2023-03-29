@@ -12,6 +12,11 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
+import { SearchProductComponent } from './search-product/search-product.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,11 @@ import { CartComponent } from './cart/cart.component';
     SellerComponent,
     HomeComponent,
     LoginComponent,
-    CartComponent
+    CartComponent,
+    SellerHomeComponent,
+    AddProductComponent,
+    DetailProductComponent,
+    SearchProductComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +38,8 @@ import { CartComponent } from './cart/cart.component';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
     
   ],
   providers: [],

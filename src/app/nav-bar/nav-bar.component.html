@@ -2,7 +2,7 @@
   <!-- <nav class="navbar navbar-light" > -->
 
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">On Card</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,7 +12,7 @@
         <input class="form-control me-2" id="input" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-      <ul id="ul" class="navbar-nav me-auto mb-2 mb-lg-0">
+      <!-- <ul id="ul" class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" [routerLink]="['/seller']"  >Seller</a>
         </li>
@@ -26,7 +26,46 @@
           <a class="nav-link"  matBadge="0" [routerLink]="['/cart']">Cart</a>
         </li>
       </ul>
-    
+     -->
+     <div [ngSwitch]="menuType">
+      <ul class="navbar-nav ms-auto" *ngSwitchCase="'default'">
+        <li class="nav-item">
+          <a class="nav-link active text-white" href="seller">Seller</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Card</a>
+        </li>
+
+      </ul>
+
+
+      <ul class="navbar-nav ms-auto" *ngSwitchCase="'seller'">
+        <li class="nav-item">
+          <a class="nav-link active text-white" routerLink="seller">{{sellerName | titlecase}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="add-product">+Product</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="seller-home">List</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="" (click)="logout()">Logout</a>
+        </li>
+
+      </ul>
+
+      </div>
     </div>
   </div>
 </nav>
